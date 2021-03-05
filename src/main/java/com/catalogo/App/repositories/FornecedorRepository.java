@@ -10,5 +10,5 @@ import com.catalogo.App.models.Fornecedor;
 @Repository
 public interface FornecedorRepository extends JpaRepository<Fornecedor, Long> {
 
-	List<Fornecedor> findByNomeContaining(String nome);
+	public List<Fornecedor> findByNomeContaining(String nome);
 }

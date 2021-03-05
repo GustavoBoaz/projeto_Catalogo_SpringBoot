@@ -19,7 +19,7 @@ import com.catalogo.App.services.ProdutoServices;
 
 @RestController
 @RequestMapping("/v1/produto")
-@CrossOrigin("*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ProdutoController {
 
 	private @Autowired ProdutoServices services;

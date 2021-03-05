@@ -42,7 +42,6 @@ public class ProdutoServices {
 			produto.get().getFornecedores().add(fornecedor.get());
 			repositoryProduto.save(produto.get());
 		}
-		
 		return repositoryFornecedor.findById(idFornecedor).get();
 	}
 }

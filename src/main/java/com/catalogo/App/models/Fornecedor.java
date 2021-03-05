@@ -27,6 +27,19 @@ public class Fornecedor {
 	@ManyToMany(mappedBy = "fornecedores" , cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JsonIgnoreProperties("fornecedores")
 	private List<Produto> produtos = new ArrayList<>();
+	
+	public Fornecedor(
+			@NotNull @Size(min = 2, max = 45, message = "Error size") String nome,
+			@NotNull @Size(min = 2, max = 45, message = "Error size") String email,
+			@NotNull @Size(min = 2, max = 45, message = "Error size") String telefone,
+			@NotNull @Size(min = 2, max = 45, message = "Error size") String endereco, List<Produto> produtos) {
+		super();
+		this.nome = nome;
+		this.email = email;
+		this.telefone = telefone;
+		this.endereco = endereco;
+		this.produtos = produtos;
+	}
 
 	public Long getId() {
 		return id;
